@@ -1,31 +1,30 @@
 # CapstoneDesign-smart-AR-platform
 
 
-# 빠르게 시작하기
-본 프로그램을 실행하기 위한 빠른 시작 가이드 입니다. 
 
-※이 프로그램을 시작하기 위해서는 [Unity](https://unity3d.com/kr/get-unity/download)와 [Nodejs](https://nodejs.org/ko/download/)가 우선적으로 설치되어야 합니다.
+# Quick start
+This is a quick start guide for running this program.
 
-###  1단계. Unity Project 열기
-본 프로그램을 clone하여 Unity라는 이름의 폴더를 Unity 에서 오픈합니다.
+※ To start this program, [Unity](https://unity3d.com/kr/get-unity/download) and [Nodejs](https://nodejs.org/en/download/) should be installed first .
 
-### 2단계. Target Marker 확인
-프로그램을 실행하면 SampleScene이 자동으로 추가되어 있습니다.<br/>
-SampleScene에서 ImageTarget으로 추가되어 있는 객체들을
-카메라로 인식 시, AR 콘텐츠가 그 위에 나타납니다.<br/>
-**즉, ImageTarget이 marker가 됩니다.**
+### Step1. Open Unity Project
+Clone this program and open a folder named Unity in Unity.
 
-*ImageTarget의 이미지는 Asset\Editor\Vufoia\ImageTargetTextures\Test 에서 확인할 수 있습니다.<br/><br/>
-*Target Marker를 자신이 원하는 객체로 바꾸고 싶다면 [Vuforia](https://www.vuforia.com/)에 가입하여
-license key를 생성하고<br/> target database를 만들어 자신의 Unity project에 import합니다. 자세한 내용은 [여기](https://library.vuforia.com/articles/Training/getting-started-with-vuforia-in-unity.html)를 참고 하세요.
+### Step2. Check Target Marker
+SampleScene is added automatically when you run the program. <br/>
+The objects added by ImageTarget in SampleScene
+When it recognizes it as a camera, AR content appears above it. <br/>
+**That is, ImageTarget becomes marker**
+*Image of ImageTarget can be found in Asset \ Editor \ Vufoia \ ImageTargetTextures \ Test. <br/> <br/>
+*If you want to change the Target Marker to the object you want, please join [Vuforia](https://www.vuforia.com/)
+Create a license key and create a target database to import into your Unity project. For more information, please visit [here](https://library.vuforia.com/articles/Training/getting-started-with-vuforia-in-unity.html).
+### Step3. Execute Nodejs server
+Run cmd to move the cloned program to the folder and run **main.js** in a folder named Nodejs.
 
-### 3단계. Nodejs 서버 실행
-cmd를 실행해 본 프로그램을 clone한 폴더로 이동후, Nodejs라는 이름의 폴더에서 **main.js**를 실행합니다.
+### Step4.  Specifying a server 
+Open the Asset \ MyScripts \ SelectContentType.cs file in the Unity project. <br/>
+`private string url =" http: // MYSERVERIP: 3000 / ";` <br/>
+Replace the MYSERVERIP part with your own server address.
 
-### 4단계. 서버 지정하기
-Unity project에서 Asset\MyScripts\SelectContentType.cs 파일을 오픈합니다.<br/>
-`private string url = "http://MYSERVERIP:3000/";`<br/>
-MYSERVERIP 부분을 자신의 서버주소로 바꿔줍니다.
-
-### 5단계. 안드로이드 APK 빌드하기
-안드로이드 디바이스를 PC에 연결 한 후, Unity 프로젝트에서 **File - Build & Run** 을 통해 실행합니다.
+### Step 5. Build the Android APK
+Connect your Android device to your PC and run  **File - Build & Run**  from the Unity project.
