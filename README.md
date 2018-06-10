@@ -28,3 +28,6 @@ Replace the MYSERVERIP part with your own server address.
 
 ### Step 5. Build the Android APK
 Connect your Android device to your PC and run  **File - Build & Run**  from the Unity project.
+
+## Demo
+<img src="https://raw.githubusercontent.com/sohyeonAn/CapstoneDesign-smart-AR-platform/master/demo.gif" >
